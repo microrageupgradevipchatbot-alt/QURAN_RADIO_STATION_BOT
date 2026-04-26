@@ -143,7 +143,6 @@ html, body, .stApp, [class*="css"] {
 }
 [data-baseweb="input"] input, [data-testid="stDateInput"] input {
     color: #c8cad8 !important; font-family: 'Space Mono', monospace !important; font-size: 12px !important;
-    caret-color: #c8a84b !important;
 }
 [data-baseweb="input"] input::placeholder {
     color: #8a90a8 !important; opacity: 1 !important;
@@ -374,7 +373,7 @@ with col_chat:
     with st.form(key="chat_form", clear_on_submit=True):
         user_query = st.text_input(
             "q", value="",
-            placeholder="e.g. هل تكررت أي سورة؟",
+            placeholder="اسأل سؤالك هنا",
             label_visibility="collapsed",
             autocomplete="off",
         )
