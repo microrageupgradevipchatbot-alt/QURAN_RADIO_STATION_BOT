@@ -5,7 +5,7 @@ import requests
 import json
 import os
 from datetime import datetime, timedelta
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.tools import tool
