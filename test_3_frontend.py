@@ -143,6 +143,7 @@ html, body, .stApp, [class*="css"] {
 }
 [data-baseweb="input"] input, [data-testid="stDateInput"] input {
     color: #c8cad8 !important; font-family: 'Space Mono', monospace !important; font-size: 12px !important;
+    caret-color: #c8a84b !important;
 }
 [data-baseweb="input"] input::placeholder {
     color: #8a90a8 !important; opacity: 1 !important;
@@ -158,6 +159,7 @@ html, body, .stApp, [class*="css"] {
 .stButton > button:hover,
 .stFormSubmitButton > button:hover { background: #d9b95a !important; }
 .stSpinner > div { border-top-color: #c8a84b !important; }
+.stForm small, [data-testid="InputInstructions"] { display: none !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -372,8 +374,9 @@ with col_chat:
     with st.form(key="chat_form", clear_on_submit=True):
         user_query = st.text_input(
             "q", value="",
-            placeholder="اكتب سؤالك هنا...",
+            placeholder="e.g. هل تكررت أي سورة؟",
             label_visibility="collapsed",
+            autocomplete="off",
         )
         send_btn = st.form_submit_button("Check ✓", use_container_width=True)
     st.markdown("</div>", unsafe_allow_html=True)
